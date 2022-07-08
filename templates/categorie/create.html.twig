@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="col-6 m-auto mt-5">
+        {{ form_start(categoryForm) }}
+        {{ form_widget(categoryForm) }}
+        {{ form_end(categoryForm) }}
+    </div>
+{% endblock %}
+
+{% block title %}
+    Eni Enchères - New Catégorie
+{% endblock %}
+

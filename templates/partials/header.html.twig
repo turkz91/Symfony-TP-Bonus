@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bucket-navbar-light">
+    <div class="container">
+        <div class="col-2">
+            <a href="{{ path('main_home') }}" class="navbar-brand bucket-border-right col-1 pe-4">
+                <img src="{{ asset('images/logoEni.png') }}" alt="" class="d-inline-block align-bottom col-4 img-fluid">
+                &nbsp; Eni Enchères
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigateur" aria-controls="navigateur" aria-expanded="false" aria-label="Navigateur">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="col-12 border-start border-dark ps-3 collapse navbar-collapse" id="navigateur">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{{ path('main_home') }}">
+                        Accueil
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{{ path('produit_create') }}">
+                        Nouveau Produit
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{{ path('categorie_list') }}">
+                        Liste Categorie
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{{ path('categorie_create') }}">
+                        Nouvelle Categorie
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

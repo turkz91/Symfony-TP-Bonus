@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eni-Enchères Catégories{% endblock %}
+
+{% block body %}
+    <h1 class="pb-4">Liste des Categories</h1>
+    {% if categories is defined %}
+        <div class="col-4 m-auto">
+            <ul class ="d-grid gap-4 list-group text-center">
+                {% for categorie in categories %}
+                    <a href=""><li class="list-group-item">{{ categorie.label }} </li></a>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <h3> Pas d'article</h3>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if produit is defined %}
+    <div class="col-6 m-auto mt-5">
+        <div class="card">
+            <h5 class="card-header text-center">{{ produit.label}} </h5>
+            <div class="card-body text-center">
+                <h5 class="card-subtitle text-start">{{ produit.category.label}} </h5>
+                <p>Prix: {{ produit.price|number_format(2, '.') }}</p>
+                <p>{{ produit.description |nl2br }}</p>
+                <a class="btn btn-primary" href="{{ path('produit_update', {'id' : produit.id}) }}">Update</a>
+                <a class="btn btn-danger" href="{{ path('produit_delete', {'id' : produit.id}) }}"> Delete</a>
+            </div>
+            <div class="card-footer text-muted text-center">
+                {{ produit.dateAdd|date("d/m/Y") }}
+            </div>
+        </div>
+    </div>
+    {% else %}
+        <h3>Pas d'article !</h3>
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}
+
